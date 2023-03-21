@@ -23,6 +23,16 @@ main {
     display:grid;
     gap:1rem;
 }
+h1 {
+    font-family: 'Comfortaa';
+    color: #222;
+    text-align: center;
+    -webkit-text-stroke-color: #222;
+    font-size: 3rem;
+    line-height:1;
+    -webkit-text-stroke-width: 1px;
+    stroke-linecap: square;
+}  
 section:first-of-type {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -43,6 +53,7 @@ section:nth-of-type(2) article{
 }
 label {
     display: flex;
+    flex-wrap:wrap;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -50,8 +61,12 @@ label {
     position: relative;
     justify-content: center;
     height: 220px;
+    align-items: end;
 }
-
+label > p {
+    width:100%;
+    text-align:center;
+}
 input[type="checkbox"]{
     position:absolute;
     top:6rem;
@@ -172,6 +187,8 @@ article p{
     background:darkgreen;
     border-radius:12px;
     transition:all 0.5s;
+    color:#fff;
+    font-weight:500;
 }
 :has(input#switch5:checked)  article {
     background:lightgreen !important;
@@ -210,9 +227,17 @@ article p{
 @media screen and (max-width:1099px){
     input[type="checkbox"]{
         top:unset;
+        position:relative;
     }
     section label {
-        height:60px;
+        min-height:230px;
+        height:auto;
+        gap:unset;
+        align-items:center;
+        justify-content: space-between;
+    }
+    section label p {
+        top:0
     }
     section:first-of-type {
         display:grid;
