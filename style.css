@@ -126,7 +126,6 @@ article p{
 :has(input#switch3:checked)  article:nth-child(3) {
     background:lightgreen;
     width:auto;
-    position:relative;
    
 }
 :has(input#switch3:checked)  article:nth-child(3) h2 {
